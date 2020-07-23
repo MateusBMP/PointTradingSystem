@@ -12,4 +12,12 @@ class OrderState extends Model
      * @var bool
      */
     public $timestamps = false;
+
+    /**
+     * Get the orders belonging to the order state
+     */
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
 }
