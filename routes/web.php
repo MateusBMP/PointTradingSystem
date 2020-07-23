@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('order_states', 'OrderStateController');
+Route::resource('users', 'UserController');
