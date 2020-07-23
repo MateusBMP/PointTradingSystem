@@ -39,7 +39,7 @@
                         <input type="{{ $input['type'] }}" name="{{ $input['name'] }}" value="{{ old($input['name'], $input['value']) }}" class="form-control @error($input['name']) is-invalid @enderror" placeholder="{{ $input['name'] }}" aria-label="{{ $input['name'] }}" aria-describedby="{{ $input['name'] }}">
                     </div>
                 @endforeach
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-success">Update</button>
             </form>
         </div>
     </div>

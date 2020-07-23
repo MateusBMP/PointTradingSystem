@@ -81,7 +81,14 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return view('edit', [
+            'inputs' => [
+                ['type' => 'string', 'name' => 'name', 'value' => $user->name],
+                ['type' => 'number', 'name' => 'points', 'value' => $user->points]
+            ],
+            'collection' => $user,
+            'route_name' => $this->route_name
+        ]);
     }
 
     /**

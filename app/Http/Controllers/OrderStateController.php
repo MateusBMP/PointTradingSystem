@@ -79,7 +79,14 @@ class OrderStateController extends Controller
      */
     public function show(OrderState $orderState)
     {
-        //
+        return view('show', [
+            'inputs' => [
+                ['type' => 'string', 'name' => 'name', 'value' => $orderState->name],
+                ['type' => 'string', 'name' => 'detail', 'value' => $orderState->detail]
+            ],
+            'collection' => $orderState,
+            'route_name' => $this->route_name
+        ]);
     }
 
     /**
