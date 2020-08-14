@@ -7,18 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     /**
-     * Get the user who transferred the points.
+     * Get the user who pay product.
      */
-    public function from_user()
+    public function payer()
     {
-        return $this->belongsTo('App\User', 'from_user_id');
+        return $this->belongsTo('App\User', 'payer_id');
     }
 
-    /**
-     * Get the user who received the points.
-     */
-    public function receive_user()
-    {
-        return $this->belongsTo('App\User', 'receive_user_id');
-    }
 }

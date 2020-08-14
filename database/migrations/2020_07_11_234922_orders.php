@@ -15,14 +15,13 @@ class Orders extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('from_user_id');
-            $table->unsignedBigInteger('receive_user_id');
+            $table->unsignedBigInteger('payer_id');
             $table->decimal('points');
-            $table->text('detail');
+            $table->decimal('cash');
+            $table->text('product');
             $table->timestamps();
 
-            $table->foreign('from_user_id')->references('id')->on('users');
-            $table->foreign('receive_user_id')->references('id')->on('users');
+            $table->foreign('payer_id')->references('id')->on('users');
         });
     }
 
