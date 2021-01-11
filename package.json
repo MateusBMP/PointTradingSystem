@@ -2,7 +2,7 @@
   "name": "pointtradingsystem",
   "version": "1.0.0",
   "description": "Estudo de implementação sobre o artigo \"Using Event Sourcing and CQRS to Build a High Performance Point Trading System\"",
-  "main": "dist/app.js",
+  "main": "dist/lib/app.js",
   "scripts": {
     "start": "tsc && node dist/lib/app.js",
     "build": "tsc",
